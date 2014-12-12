@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47308AAE-99B8-4895-835F-012D16F1FB70}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Volante</RootNamespace>
+    <AssemblyName>Volante</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ClassLibrary1.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ClassLibrary1.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\DatabaseException.vb" />
+    <Compile Include="src\DatabaseFactory.vb" />
+    <Compile Include="src\DatabaseListener.vb" />
+    <Compile Include="src\IBitIndex.vb" />
+    <Compile Include="src\IBlob.vb" />
+    <Compile Include="src\IClassLoader.vb" />
+    <Compile Include="src\IDatabase.vb" />
+    <Compile Include="src\IFieldIndex.vb" />
+    <Compile Include="src\IFile.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\IGenericIndex.vb" />
+    <Compile Include="src\IIndex.vb" />
+    <Compile Include="src\ILink.vb" />
+    <Compile Include="src\impl\Btree.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\BtreeFieldIndex.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\BtreeMultiFieldIndex.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\PersistentSet.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\AsyncReplicationMasterFile.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\OldBitIndexImpl.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\BlobImpl.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\OldBtree.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\OldBtreeFieldIndex.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\OltBtreeKey.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\OldBtreeMultiFieldIndex.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\OldBtreePage.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\ByteBuffer.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\Bytes.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\ClassDescriptor.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\CodeGenerator.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\DatabaseImpl.vb" />
+    <Compile Include="src\impl\DefaultPersistentComparator.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\GeneratedSerializer.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\LinkImpl.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\LRU.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\LruObjectCache.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\ObjectHeader.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\OidHashTable.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\Page.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\PagePool.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\PArrayImpl.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\OldPersistentSet.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\PersistentStub.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\PersistentWrapper.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\VolanteSink.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\PTrie.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\RelationImpl.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\ReplicationMasterFile.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\ReplicationMasterStorageImpl.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\ReplicationSlaveStorageImpl.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\Rtree.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\RtreePage.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\RtreeR2.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\RtreeR2Page.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\ScalableSet.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\StrongHashTable.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\ThickIndex.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\TimeSeriesImpl.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\Ttree.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\TtreePage.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\WeakHashTable.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\XMLExporter.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\impl\XMLImporter.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\IPArray.vb" />
+    <Compile Include="src\IPatriciaTrie.vb" />
+    <Compile Include="src\IPersistent.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\IReplicationMasterDatabase.vb" />
+    <Compile Include="src\IReplicationSlaveDatabase.vb" />
+    <Compile Include="src\IResource.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\ISet.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\ISortedCollection.vb" />
+    <Compile Include="src\ISpatialIndex.vb" />
+    <Compile Include="src\ISpatialIndexR2.vb" />
+    <Compile Include="src\ITimeSeries.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\Key.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\L2List.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\L2ListElem.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\MarshalByRefPersistent.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\NullFile.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\OsFile.vb" />
+    <Compile Include="src\PatriciaTrieKey.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\Persistent.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\PersistentCollection.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\PersistentComparator.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\PersistentContext.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\PersistentResource.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\PersistentString.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\Projection.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\Rc4File.vb" />
+    <Compile Include="src\Rectangle.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\RectangleR2.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\Relation.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\StreamFile.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\TransparentPersistenceAttribute.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\TypeMemoryUsage.vb" />
+    <Compile Include="src\XMLImportException.vb">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="changelog-volante.txt" />
+    <Content Include="todo.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="Volante.Volante.Impl" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
